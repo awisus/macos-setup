@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# apps
+sudo softwareupdate --install-rosetta
+
+brew tap heroku/brew && brew install heroku
+brew install git
+brew install gradle
+brew install jenv
+brew install maven
+
+brew tap AdoptOpenJDK/openjdk
+brew install --cask adoptopenjdk11
+brew install --cask appcleaner
+brew install --cask bitwarden
+brew install --cask brave-browser
+brew install --cask caffeine
+brew install --cask chromedriver
+brew install --cask docker
+brew install --cask firefox
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+brew install --cask font-fira-code-nerd-font
+brew install --cask fork
+brew install --cask gimp
+brew install --cask google-chrome
+brew install --cask google-drive
+brew install --cask gpg-suite
+brew install --cask hiddenbar
+brew install --cask homebrew/cask-drivers/steelseries-exactmouse-tool
+brew install --cask insomnia
+brew install --cask intellij-idea
+brew install --cask intellij-idea-ce
+brew install --cask iterm2
+brew install --cask insomnia
+brew install --cask libreoffice
+brew install --cask libreoffice-language-pack
+brew install --cask minecraft
+brew install --cask monitorcontrol
+brew install --cask nvidia-geforce-now
+brew install --cask openvpn-connect
+brew install --cask signal
+brew install --cask thunderbird
+brew install --cask visual-studio-code
+brew install --cask zoom
+
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -runFirstLaunch
+
+bash tools/docker.sh
+bash tools/flutter.sh
+bash tools/jenv.sh
+bash tools/node.sh
+bash tools/zsh.sh
+
+# config
+mkdir -p android
+mkdir -p flutter
+chflags hidden android
+chflags hidden flutter
+
+defaults write com.apple.dock tilesize -int 48
+defaults write com.apple.dock orientation left
+defaults write com.apple.dock mineffect -string scale
+defaults write com.apple.dock show-recents -bool no
+defaults write com.apple.dock persistent-apps -array
+for dockItem in /Applications/{"Signal","Thunderbird","Firefox","IntelliJ IDEA CE","Fork","iTerm"}.app; do
+  defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>'$dockItem'</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+done
+killall Dock
+
+git config --global color.ui true
+git config --global pull.rebase true
+git config --global user.name "Jens Awisus"
+git config --global user.email "awisus.jens@gmail.com"
+
+# manual steps
+echo "Installation abgeschlossen!"
+echo "Noch zu installieren: pcloud"

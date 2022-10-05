@@ -13,7 +13,6 @@ brew tap AdoptOpenJDK/openjdk
 brew install --cask adoptopenjdk11
 brew install --cask appcleaner
 brew install --cask bitwarden
-brew install --cask brave-browser
 brew install --cask caffeine
 brew install --cask chromedriver
 brew install --cask docker
@@ -38,11 +37,9 @@ brew install --cask libreoffice-language-pack
 brew install --cask minecraft
 brew install --cask monitorcontrol
 brew install --cask nvidia-geforce-now
-brew install --cask openvpn-connect
 brew install --cask signal
 brew install --cask thunderbird
 brew install --cask visual-studio-code
-brew install --cask zoom
 
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 sudo xcodebuild -runFirstLaunch

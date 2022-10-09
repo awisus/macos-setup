@@ -50,6 +50,9 @@ bash tools/jenv.sh
 bash tools/node.sh
 bash tools/zsh.sh
 
+chmod +x update.sh
+sudo cp update.sh /usr/local/bin/update
+
 # config
 mkdir -p android
 mkdir -p flutter

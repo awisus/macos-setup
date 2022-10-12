@@ -9,3 +9,4 @@ jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
 jenv global 11.0
 jenv enable-plugin gradle
 jenv enable-plugin maven
+jenv enable-plugin export

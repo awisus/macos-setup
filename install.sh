@@ -11,6 +11,7 @@ brew install maven
 
 brew tap AdoptOpenJDK/openjdk
 brew install --cask adoptopenjdk11
+brew install --cask amethyst
 brew install --cask appcleaner
 brew install --cask bitwarden
 brew install --cask caffeine

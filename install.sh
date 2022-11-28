@@ -32,6 +32,7 @@ brew install --cask intellij-idea
 brew install --cask intellij-idea-ce
 brew install --cask iterm2
 brew install --cask insomnia
+brew install --cask karabiner-elements
 brew install --cask libreoffice
 brew install --cask libreoffice-language-pack
 brew install --cask minecraft

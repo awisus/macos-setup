@@ -60,6 +60,7 @@ mkdir -p android
 mkdir -p flutter
 chflags hidden android
 chflags hidden flutter
+touch $HOME/.hushlogin
 
 defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock orientation left

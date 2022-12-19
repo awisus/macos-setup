@@ -9,8 +9,8 @@ brew install gradle
 brew install jenv
 brew install maven
 
-brew tap AdoptOpenJDK/openjdk
-brew install --cask adoptopenjdk11
+brew tap homebrew/cask-versions
+brew install --cask temurin17
 brew install --cask amethyst
 brew install --cask appcleaner
 brew install --cask bitwarden

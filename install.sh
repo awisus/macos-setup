@@ -4,6 +4,8 @@
 sudo softwareupdate --install-rosetta
 
 brew tap heroku/brew && brew install heroku
+brew install docker
+brew install docker-compose
 brew install git
 brew install gradle
 brew install jenv
@@ -16,7 +18,7 @@ brew install --cask appcleaner
 brew install --cask bitwarden
 brew install --cask caffeine
 brew install --cask chromedriver
-brew install --cask docker
+brew install --cask colima
 brew install --cask firefox
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
@@ -53,6 +55,11 @@ bash tools/zsh.sh
 
 chmod +x update.sh
 sudo cp update.sh /usr/local/bin/update
+
+# docker
+mkdir -p ~/.docker/cli-plugins
+ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+colima start --cpu 5 --memory 8 --disk 64
 
 # config
 mkdir -p android

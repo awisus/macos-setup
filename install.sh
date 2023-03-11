@@ -5,6 +5,7 @@ sudo softwareupdate --install-rosetta
 
 brew tap heroku/brew && brew install heroku
 brew install docker
+brew install docker-buildx
 brew install docker-compose
 brew install git
 brew install gradle
@@ -59,6 +60,7 @@ sudo cp update.sh /usr/local/bin/update
 # docker
 mkdir -p ~/.docker/cli-plugins
 ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+ln -sfn $(brew --prefix)/opt/docker-buildx/bin/docker-buildx   ~/.docker/cli-plugins/docker-buildx
 colima start --cpu 5 --memory 8 --disk 64
 
 # config

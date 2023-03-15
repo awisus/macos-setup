@@ -13,6 +13,7 @@ brew install jenv
 brew install maven
 
 brew tap homebrew/cask-versions
+brew install --cask temurin11
 brew install --cask temurin17
 brew install --cask amethyst
 brew install --cask appcleaner

@@ -62,7 +62,7 @@ sudo cp update.sh /usr/local/bin/update
 mkdir -p ~/.docker/cli-plugins
 ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ln -sfn $(brew --prefix)/opt/docker-buildx/bin/docker-buildx   ~/.docker/cli-plugins/docker-buildx
-colima start --cpu 5 --memory 8 --disk 64
+colima start --cpu 5 --memory 8 --disk 64 --kubernetes
 
 # config
 mkdir -p android

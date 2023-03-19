@@ -4,6 +4,7 @@
 sudo softwareupdate --install-rosetta
 
 brew tap heroku/brew && brew install heroku
+brew install colima
 brew install docker
 brew install docker-buildx
 brew install docker-compose
@@ -20,7 +21,6 @@ brew install --cask appcleaner
 brew install --cask bitwarden
 brew install --cask caffeine
 brew install --cask chromedriver
-brew install --cask colima
 brew install --cask firefox
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code

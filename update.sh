@@ -1,14 +1,10 @@
 #!/bin/bash
-# place under /usr/local/bin/update
 
 function print_status() {
     echo "$(tput setaf 2)==>$(tput bold) $1$(tput sgr0)"
 }
 
 print_status "GAINING GROUP OWNERSHIP"
-sudo chown -R $(whoami) $(brew --prefix)/*
-sudo chgrp -R brew $(brew --prefix)/*
-sudo chmod -R g+w  $(brew --prefix)/*
 sudo chgrp staff   /Applications/*
 sudo chmod g+w     /Applications/*
 echo "done."

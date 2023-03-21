@@ -70,6 +70,8 @@ mkdir -p flutter
 chflags hidden android
 chflags hidden flutter
 touch $HOME/.hushlogin
+cp update.sh $HOME/.local/bin/update
+chmod +x     $HOME/.local/bin/update
 
 defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock orientation left

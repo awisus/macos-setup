@@ -21,13 +21,13 @@ brew install --cask appcleaner
 brew install --cask bitwarden
 brew install --cask caffeine
 brew install --cask chromedriver
+brew install --cask chromium
 brew install --cask firefox
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 brew install --cask font-fira-code-nerd-font
 brew install --cask fork
 brew install --cask gimp
-brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask gpg-suite
 brew install --cask hiddenbar

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # apps
 sudo softwareupdate --install-rosetta

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 function print_status() {
     echo "$(tput setaf 2)==>$(tput bold) $1$(tput sgr0)"

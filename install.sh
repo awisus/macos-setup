@@ -19,9 +19,9 @@ brew install --cask temurin17
 brew install --cask amethyst
 brew install --cask appcleaner
 brew install --cask bitwarden
-brew install --cask brave-browser
 brew install --cask caffeine
 brew install --cask chromedriver
+brew install --cask chromium
 brew install --cask firefox
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code

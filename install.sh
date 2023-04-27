@@ -1,7 +1,18 @@
 #!/bin/zsh
 
-# apps
+# xcode
+if [ ! -d /Applications/Xcode.app ] ; then
+  echo "install xcode first"
+  exit 1
+fi
+
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -runFirstLaunch
 sudo softwareupdate --install-rosetta
+
+# apps
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew tap heroku/brew && brew install heroku
 brew install colima
@@ -19,9 +30,9 @@ brew install --cask temurin17
 brew install --cask amethyst
 brew install --cask appcleaner
 brew install --cask bitwarden
+brew install --cask brave-browser
 brew install --cask caffeine
 brew install --cask chromedriver
-brew install --cask chromium
 brew install --cask firefox
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
@@ -33,7 +44,6 @@ brew install --cask gpg-suite
 brew install --cask hiddenbar
 brew install --cask homebrew/cask-drivers/steelseries-exactmouse-tool
 brew install --cask insomnia
-brew install --cask intellij-idea
 brew install --cask intellij-idea-ce
 brew install --cask iterm2
 brew install --cask insomnia
@@ -45,9 +55,6 @@ brew install --cask nvidia-geforce-now
 brew install --cask signal
 brew install --cask thunderbird
 brew install --cask visual-studio-code
-
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-sudo xcodebuild -runFirstLaunch
 
 bash tools/docker.sh
 bash tools/flutter.sh
@@ -78,7 +85,7 @@ defaults write com.apple.dock orientation left
 defaults write com.apple.dock mineffect -string scale
 defaults write com.apple.dock show-recents -bool no
 defaults write com.apple.dock persistent-apps -array
-for dockItem in /Applications/{"Signal","Thunderbird","Firefox","IntelliJ IDEA CE","Visual Studio Code","Fork","iTerm"}.app; do
+for dockItem in /Applications/{"Signal","Firefox","Brave Browser","Thunderbird","Visual Studio Code","Fork","IntelliJ IDEA CE","iTerm","NVIDIA GeForce NOW"}.app; do
   defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>'$dockItem'</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 done
 killall Dock

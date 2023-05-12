@@ -63,9 +63,6 @@ bash tools/jenv.sh
 bash tools/node.sh
 bash tools/zsh.sh
 
-chmod +x update.sh
-sudo cp update.sh /usr/local/bin/update
-
 # docker
 mkdir -p ~/.docker/cli-plugins
 ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose

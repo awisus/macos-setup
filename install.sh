@@ -22,6 +22,7 @@ brew install docker-compose
 brew install git
 brew install gradle
 brew install jenv
+brew install kubectl
 brew install maven
 
 brew tap homebrew/cask-versions

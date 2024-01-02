@@ -55,8 +55,8 @@ brew install --cask insomnia
 brew install --cask libreoffice
 brew install --cask libreoffice-language-pack
 brew install --cask minecraft
-brew install --cask monitorcontrol
 brew install --cask nvidia-geforce-now
+brew install --cask proxy-audio-device
 brew install --cask signal
 brew install --cask thunderbird
 
